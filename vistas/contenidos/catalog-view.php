@@ -8,7 +8,7 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Catálogo <small>LIBROS</small></h1>
+        <h1 class="text-titles"><i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catálogo <small>LIBROS</small></h1>
     </div>
 </div>
 
@@ -17,9 +17,9 @@
         <a href="<?php echo SERVERURL.'catalog/all/';?>" class="btn btn-default btn-raised">SELECCIONE UNA CATEORÍA</a>
         <a data-target="dropdown-menu" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
         <ul class="dropdown-menu drop" style="border-radius: 15px;">
-            <li><a href="<?php echo SERVERURL.'catalog/all/';?>">Todas</a></li>
+        <li><a href="<?php echo SERVERURL.'catalog/all/';?>">Todas</a></li>
 
-<?php 
+        <?php 
             $data = $insCat->datos_categoria_controlador();
             foreach ($data as $categoria){
                 $cats[$categoria['CategoriaNombre']] = $categoria['CategoriaCodigo'];

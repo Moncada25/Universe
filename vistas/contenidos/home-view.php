@@ -6,10 +6,9 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Sistema <small>REGISTROS</small></h1>
+        <h1 class="text-titles"> Sistema <small>REGISTROS</small></h1>
     </div>
 </div>
-
 
 <div class="full-box text-center" style="padding: 30px 10px;">
 
@@ -71,7 +70,7 @@
 </div>
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"> <i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Sistema<small> LÍNEA DE TIEMPO</small></h1>
+        <h1 class="text-titles">Sistema<small> LÍNEA DE TIEMPO</small></h1>
     </div>
     <section id="cd-timeline" class="cd-container">
 

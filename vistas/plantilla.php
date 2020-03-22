@@ -16,6 +16,7 @@ session_start(['name' => 'SBP']);
 <body>
 
 	<?php 
+
 		$peticionAjax = false;
 
 		require_once "./controladores/loginControlador.php";
