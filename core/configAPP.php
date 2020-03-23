@@ -1,7 +1,7 @@
 <?php
 
     const SERVER = "localhost";
-    const DB = "universe";
+    const DB = "packapps";
     const USER = "root";
     const PASS = "";
 
