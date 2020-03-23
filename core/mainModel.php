@@ -9,7 +9,7 @@
     class mainModel{
 
         protected static function conectar(){
-            $enlace = new PDO(SGBD, USER, PASS);
+            $enlace = new PDO(SGBD, USER, PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             return $enlace;
         }
 
