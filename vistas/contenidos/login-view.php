@@ -17,7 +17,7 @@
             <div class="form-group text-center">
                 <input type="submit" value="Iniciar sesión" class="btn btn-info" style="color: #FFF;">
                 <br><small>¿No estás registrado?</small><br>
-                <a href="<?php echo SERVERURL;?>registro/"><input type="button" value="Regístrate" class="btn btn-info" style="color: #FFF;"></a>
+                <a href="<?php echo SERVERURL;?>registro/"><input type="button" value="Regístrate" id="btnRegistrarNuevo" class="btn btn-info" style="color: #FFF;"></a>
             </div>
         </form>
     </div>

@@ -102,17 +102,22 @@
                             </div>
                         </div>
                     </fieldset>
-                    <p class="text-center" style="margin-top: 20px;">
-                        <button type="submit" class="btn btn-primary btn-raised btn-sm">Registrarse</button>
-                    </p>
-                    <input type="hidden" name="registro" value="true">
+                    <div class="row">
+                    <div class="col-sm-6">
+                        <p class="text-center" style="margin-top: 20px;">
+                            <button type="submit" id="btnRegistrar"class="btn btn-primary btn-raised btn-sm">Registrarse</button>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-center" style="margin-top: 20px;">
+                        <a href="<?php echo SERVERURL;?>login/"><input type="button" id="btnIngresar" value="Regresar" class="btn btn-danger btn-raised btn-sm"></a>
+                        </p>
+                    </div>
+                        <input type="hidden" name="registro" value="true">
+                    </div>
                     <div class="RespuestaAjax"></div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<!-- 
-if(isset($_POST['registro'])){
-                echo "<script>window.location.replace('".SERVERURL."');</script>";
-            } -->

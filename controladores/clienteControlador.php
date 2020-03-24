@@ -13,7 +13,7 @@
             $nombre = mainModel::limpiar_cadena($_POST['nombre-reg']);
             $apellido = mainModel::limpiar_cadena($_POST['apellido-reg']);
             $telefono = mainModel::limpiar_cadena($_POST['telefono-reg']);
-            $ocupacion = mainModel::limpiar_cadena($_POST['ocupacion-reg']);
+            $ocupacion = mainModel::limpiar_cadena($_POST['categoria-up']);
             $direccion = mainModel::limpiar_cadena($_POST['direccion-reg']);
 
             $usuario = mainModel::limpiar_cadena($_POST['usuario-reg']);
@@ -135,7 +135,7 @@
                     }
                 }
             }
-
+            
             return mainModel::sweet_alert($alerta);
         }
 

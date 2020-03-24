@@ -74,7 +74,7 @@ $(document).ready(function() {
                             var percentComplete = evt.loaded / evt.total;
                             percentComplete = parseInt(percentComplete * 100);
                             if (percentComplete < 100) {
-                                respuesta.html('<p class="text-center">Procesado... (' + percentComplete + '%)</p><div class="progress progress-striped active"><div class="progress-bar progress-bar-info" style="width: ' + percentComplete + '%;"></div></div>');
+                                respuesta.html('<p class="text-center">Procesando... (' + percentComplete + '%)</p><div class="progress progress-striped active"><div class="progress-bar progress-bar-info" style="width: ' + percentComplete + '%;"></div></div>');
                             } else {
                                 respuesta.html('<p class="text-center"></p>');
                             }
