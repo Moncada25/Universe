@@ -81,6 +81,11 @@
                     <i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catálogo
                 </a>
             </li>
+            <li>
+                <a href="<?php echo SERVERURL; ?>github/">
+                    <i class="zmdi zmdi-github-alt zmdi-hc-fw"></i> GitHub
+                </a>
+            </li>
         </ul>
     </div>
 </section>
