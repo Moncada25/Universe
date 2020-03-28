@@ -15,7 +15,7 @@
             </div>
             <div class="col-xs-4">
                 <p class="text-center">
-                    <a href="<?php echo SERVERURL;?>github/"><input type="button" id="linkPackApps" value="PackApps" class="btn btn-info btn-raised btn-sm"></a>
+                    <a href="https://mega.nz/#F!1E1SQKST!yBXhMg1ZHbrCHSgRm6nw3A" target="_blank"><input type="button" id="linkPackApps" value="PackApps" class="btn btn-info btn-raised btn-sm"></a>
                 </p>
             </div>
             <div class="col-xs-4">
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <div class="form-group label-floating">
-                    <span class="control-label">¿Qué tal te parece? ¡Déjanos tu feedback!</span>
+                    <span class="control-label">¿Qué te parece? ¡Déjanos tu feedback!</span>
                     <textarea class="form-control" name="comentarioPackApps"></textarea>
                 </div>
             </div>
@@ -66,7 +66,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <div class="form-group label-floating">
-                    <span class="control-label">¿Qué tal te parece? ¡Déjanos tu feedback!</span>
+                    <span class="control-label">¿Qué te parece? ¡Déjanos tu feedback!</span>
                     <textarea class="form-control" name="comentarioBookverse"></textarea>
                 </div>
             </div>
