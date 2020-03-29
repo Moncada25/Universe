@@ -54,6 +54,7 @@ Bookverse requires a browser and xampp to run in localhost:
 
 ```sh
 start xampp control panel
+move project to xampp/htdocs
 open http://localhost/Bookverse en your browser 
 ```
 
