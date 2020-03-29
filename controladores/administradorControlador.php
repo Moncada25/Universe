@@ -7,10 +7,10 @@
     }
 
     class administradorControlador extends administradorModelo{
-        
+
         //controlador para agregar administrador
         public function agregar_administrador_controlador(){
-            
+
             $nombre = mainModel::limpiar_cadena($_POST['nombre-reg']);
             $apellido = mainModel::limpiar_cadena($_POST['apellido-reg']);
             $telefono = mainModel::limpiar_cadena($_POST['telefono-reg']);
@@ -45,12 +45,12 @@
                 if($password1 != $password2){
                     $alerta = [
                         "Alerta" => "simple",
-                        "Titulo" => "Ocurrió un error inesperado",
+                        "Titulo" => "Ocurrió un error inesperado.",
                         "Texto" => "Las contraseñas ingresadas no coinciden, por favor intente nuevamente.",
                         "Tipo" => "error"
                     ];
                 }else{
-    
+
                     if($email != ""){
                         $consulta2 = mainModel::ejecutar_consulta_simple("SELECT CuentaEmail FROM cuenta WHERE CuentaEmail = '$email' ");
 
@@ -107,7 +107,7 @@
                                     "Apellido" => $apellido,
                                     "Telefono" => $telefono,
                                     "Direccion" => $direccion,
-                                    "Codigo" => $codigo 
+                                    "Codigo" => $codigo
                                 ];
 
                                 $guardarAdmin = administradorModelo::agregar_administrador_modelo($dataAD);
@@ -160,15 +160,15 @@
             $inicio = ($pagina > 0) ? (($pagina * $registros) - $registros) : 0;
 
             if(isset($busqueda) && $busqueda != ""){
-                $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM admin 
+                $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM admin
                 WHERE ((CuentaCodigo!='$codigo' AND id!=1) AND (AdminNombre LIKE '%$busqueda%' OR AdminApellido LIKE '%$busqueda%' OR AdminTelefono LIKE '%$busqueda%'))
                 ORDER BY AdminNombre ASC LIMIT $inicio, $registros";
 
                 $paginaurl = "adminsearch";
             }else{
-                $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM admin 
+                $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM admin
                 WHERE CuentaCodigo!='$codigo' AND id!=1 ORDER BY AdminNombre ASC LIMIT $inicio, $registros";
-        
+
                 $paginaurl = "adminlist";
             }
 
@@ -182,7 +182,7 @@
             $total = (int) $total->fetchColumn();
 
             $Npaginas = ceil($total/$registros);
- 
+
             $tabla .= '
             <div class="table-responsive">
                 <table class="table table-hover text-center">
@@ -197,7 +197,7 @@
                             $tabla .= '<th class="text-center">A. CUENTA</th>
                                             <th class="text-center">A. DATOS</th>';
                         }
-                        
+
                         if($privilegio == 1){
                             $tabla .= '<th class="text-center">ELIMINAR</th>';
                         }
@@ -271,7 +271,7 @@
                                 <td colspan="8"> No hay registros en el sistema. </td>
                             </tr>
                         ';
-                    }     
+                    }
                 }
 
             $tabla .= '</tbody></table></div>';
@@ -288,7 +288,7 @@
                     $tabla .= '<li><a href="'.SERVERURL.$paginaurl.'/'.($pagina - 1).'/"><i class="zmdi zmdi-arrow-left"></i></a></li>';
                 }
 
-                for ($i=1; $i <= $Npaginas; $i++) { 
+                for ($i=1; $i <= $Npaginas; $i++) {
 
                     if($pagina == $i){
                         $tabla .= '<li class="active"><a href="'.SERVERURL.$paginaurl.'/'.$i.'/">'.$i.'</a></li>';
@@ -308,7 +308,7 @@
 
             return $tabla;
         }
- 
+
         //controlador para eliminar administrador
         public function eliminar_administrador_controlador(){
 
@@ -402,7 +402,7 @@
             $datosAdmin = $query1->fetch();
 
             if($dni != $datosAdmin['AdminDNI']){
-                
+
                 $query2 = mainModel::ejecutar_consulta_simple("SELECT AdminDNI FROM admin WHERE AdminDNI = '$dni' ");
 
                 if($query2->rowCount() >= 1){
@@ -413,12 +413,12 @@
                         "Texto" => "El DNI que acaba de ingresar ya se encuentra registrado.",
                         "Tipo" => "error"
                     ];
-    
+
                     return mainModel::sweet_alert($alerta);
                     exit();
                 }
-            }     
-            
+            }
+
             $dataAD = [
                 "DNI" => $dni,
                 "Nombre" => $nombre,

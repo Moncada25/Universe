@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Administración <small>CATEORÍAS</small></h1>
+        <h1 class="text-titles text-center"><small>ADMINISTRACIÓN DE CATEGORÍAS</small></h1>
     </div>
 </div>
 
@@ -19,9 +19,9 @@
     </ul>
 </div>
 
-<?php 
-    require_once "./controladores/categoriaControlador.php"; 
-    $insCat = new categoriaControlador();    
+<?php
+    require_once "./controladores/categoriaControlador.php";
+    $insCat = new categoriaControlador();
 ?>
 
 <!-- Panel listado de categorias -->

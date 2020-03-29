@@ -34,31 +34,33 @@ $(document).ready(function() {
         var accion = form.attr('action');
         var metodo = form.attr('method');
         var respuesta = form.children('.RespuestaAjax');
-
+        var titulo = "¿Desea continuar?"
         var msjError = "<script>swal('Ocurrió un error inesperado','Por favor recargue la página','error');</script>";
         var formdata = new FormData(this);
 
         var textoAlerta;
 
         if (tipo === "save") {
-            textoAlerta = "Los datos que enviarás quedarán almacenados en el sistema";
+            textoAlerta = "Los datos que envías quedarán almacenados en el sistema.";
         } else if (tipo === "delete") {
-            textoAlerta = "Los datos serán eliminados completamente del sistema";
+            textoAlerta = "Los datos serán eliminados completamente del sistema.";
         } else if (tipo === "update") {
-            textoAlerta = "Los datos del sistema serán actualizados";
+            textoAlerta = "Los datos del sistema serán actualizados.";
         } else if (tipo === "descarga") {
-            textoAlerta = "El archivo será descargado";
+            textoAlerta = "El archivo será descargado.";
         } else {
-            textoAlerta = "Quieres realizar la operación solicitada";
+            textoAlerta = "";
         }
 
         swal({
-            title: "¿Estás seguro?",
+            title: titulo,
             text: textoAlerta,
             type: "question",
             showCancelButton: true,
-            confirmButtonText: "Aceptar",
-            cancelButtonText: "Cancelar"
+            confirmButtonColor: '#03A9F4',
+            cancelButtonColor: '#F44336',
+            confirmButtonText: '<i class="zmdi zmdi-check"></i> Aceptar',
+            cancelButtonText: '<i class="zmdi zmdi-close-circle"></i> Cancelar'
         }).then(function() {
             $.ajax({
                 type: metodo,

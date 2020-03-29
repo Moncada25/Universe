@@ -1,6 +1,6 @@
-<?php 
-    require_once "./controladores/categoriaControlador.php"; 
-    $insCat = new categoriaControlador(); 
+<?php
+    require_once "./controladores/categoriaControlador.php";
+    $insCat = new categoriaControlador();
 
     $cats = [];
     $datos=explode("/", $_GET['views']);
@@ -8,7 +8,7 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catálogo <small>LIBROS</small></h1>
+        <h1 class="text-titles text-center"><small>CATÁLOGO</small></h1>
     </div>
 </div>
 
@@ -19,7 +19,7 @@
         <ul class="dropdown-menu drop" style="border-radius: 15px;">
         <li><a href="<?php echo SERVERURL.'catalog/all/';?>">Todas</a></li>
 
-        <?php 
+        <?php
             $data = $insCat->datos_categoria_controlador();
             foreach ($data as $categoria){
                 $cats[$categoria['CategoriaNombre']] = $categoria['CategoriaCodigo'];
@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<?php 
+<?php
 
 if($datos[1] == "all"){ ?>
 
@@ -39,7 +39,7 @@ if($datos[1] == "all"){ ?>
     <div class="container-fluid">
     <div class="panel panel-success">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-book"></i> &nbsp; LISTADO DE LIBROS</h3>
+            <h3 class="panel-title"><i class="zmdi zmdi-book"></i> &nbsp; LIBROS DISPONIBLES</h3>
         </div>
         <div class="panel-body">
             <?php
@@ -67,7 +67,7 @@ if($datos[1] == "all"){ ?>
         </div>
     </div>
 
-<?php 
+<?php
             }else{ ?>
 
                 <div class="alert alert-dismissible alert-warning text-center">
@@ -78,7 +78,7 @@ if($datos[1] == "all"){ ?>
                 </div>
 
 <?php  }
-        ?>      
+        ?>
             </div>
         </div>
     </div>

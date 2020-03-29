@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
+        <h1 class="text-titles text-center"><small>ADMINISTRADORES</small></h1>
     </div>
 </div>
 
@@ -30,9 +30,9 @@
     </ul>
 </div>
 
-<?php 
-    require_once "./controladores/administradorControlador.php"; 
-    $insAdmin = new administradorControlador();    
+<?php
+    require_once "./controladores/administradorControlador.php";
+    $insAdmin = new administradorControlador();
 ?>
 
 <!-- Panel listado de administradores -->
@@ -42,10 +42,10 @@
             <h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES</h3>
         </div>
         <div class="panel-body">
-            <?php 
+            <?php
                 $pagina = explode("/", $_GET['views']);
                 echo $insAdmin->paginador_administrador_controlador($pagina[1], 10, $_SESSION['privilegio_sbp'], $_SESSION['codigo_cuenta_sbp'], "");
-            ?>  
+            ?>
         </div>
     </div>
 </div>

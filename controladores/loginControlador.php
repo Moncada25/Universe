@@ -7,7 +7,7 @@ if($peticionAjax){
 }
 
 class loginControlador extends loginModelo{
-    
+
     public function iniciar_sesion_controlador(){
 
         $usuario = mainModel::limpiar_cadena($_POST['usuario']);
@@ -25,9 +25,9 @@ class loginControlador extends loginModelo{
 
             $row = $datosCuenta->fetch();
 
-            $fechaActual = date("Y-m-d");
+            $fechaActual = date("M") . " " . date("d") . ", " . date("Y");
             $yearActual = date("Y");
-            $horaActual = date("h:i:s a");
+            $horaActual = date("H:i:s");
 
             $consulta1 = mainModel::ejecutar_consulta_simple("SELECT id FROM bitacora");
 
@@ -68,7 +68,7 @@ class loginControlador extends loginModelo{
                         $_SESSION['apellido_sbp'] = $userData['ClienteApellido'];
                     }
 
-                    $_SESSION['usuario_sbp'] = $row['CuentaUsuario']; 
+                    $_SESSION['usuario_sbp'] = $row['CuentaUsuario'];
                     $_SESSION['tipo_sbp'] = $row['CuentaTipo'];
                     $_SESSION['privilegio_sbp'] = $row['CuentaPrivilegio'];
                     $_SESSION['foto_sbp'] = $row['CuentaFoto'];
@@ -91,7 +91,7 @@ class loginControlador extends loginModelo{
                         "Texto" => "No se ha podido iniciar sesión por problemas técnicos, por favor intente nuevamente.",
                         "Tipo" => "error"
                     ];
-    
+
                     return mainModel::sweet_alert($alerta);
                 }
 
@@ -122,7 +122,7 @@ class loginControlador extends loginModelo{
         session_start(['name' => 'SBP']);
 
         $token = mainModel::decryption($_GET['Token']);
-        $hora = date("h:i:s a");
+        $hora = date("H:i:s");
 
         $datos = [
             "Usuario" => $_SESSION['usuario_sbp'],
@@ -144,7 +144,7 @@ class loginControlador extends loginModelo{
     }
 
     public function redireccionar_usuario_controlador($tipo){
-        
+
         if($tipo == "Administrador"){
             $redirec = '<script> window.location.href="'.SERVERURL.'home/" </script>';
         }else{

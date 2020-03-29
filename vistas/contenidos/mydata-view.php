@@ -1,9 +1,4 @@
-<div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-account-circle zmdi-hc-fw"></i> Información</small></h1>
-    </div>
-</div>
-
+<br>
 <!-- Panel mis datos -->
 <div class="container-fluid">
 

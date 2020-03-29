@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Usuarios <small>CLIENTES</small></h1>
+        <h1 class="text-titles text-center"><small>CLIENTES</small></h1>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
     </ul>
 </div>
 
-<?php 
+<?php
     if(!isset($_SESSION['busqueda_cliente']) && empty(isset($_SESSION['busqueda_cliente']))):
 ?>
 
@@ -66,10 +66,10 @@
 <div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; BUSCAR CLIENTE</h3>
+            <h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; RESULTADOS</h3>
         </div>
         <div class="panel-body">
-            <?php 
+            <?php
                 require_once "./controladores/clienteControlador.php";
                 $insCliente = new clienteControlador();
                 $pagina = explode("/", $_GET['views']);

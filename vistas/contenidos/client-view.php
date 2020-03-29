@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Usuarios <small>CLIENTES</small></h1>
+        <h1 class="text-titles text-center"><small>CLIENTES</small></h1>
     </div>
 </div>
 

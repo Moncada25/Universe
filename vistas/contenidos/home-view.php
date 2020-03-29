@@ -6,13 +6,13 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"> Sistema <small>REGISTROS</small></h1>
+        <h1 class="text-titles text-center"><small>REGISTROS</small></h1>
     </div>
 </div>
 
 <div class="full-box text-center" style="padding: 30px 10px;">
 
-    <?php 
+    <?php
         require "./controladores/administradorControlador.php";
 
         $IAdmin = new administradorControlador();
@@ -45,7 +45,7 @@
     </article>
     <article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
-            Clientes
+            CLIENTES
         </div>
         <div class="full-box tile-icon text-center">
             <i class="zmdi zmdi-male-alt"></i>
@@ -70,11 +70,11 @@
 </div>
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles">Sistema<small> LÍNEA DE TIEMPO</small></h1>
+        <h1 class="text-titles text-center"><small>LÍNEA DE TIEMPO</small></h1>
     </div>
     <section id="cd-timeline" class="cd-container">
 
-        <?php 
+        <?php
         foreach($dataBitacora as $bitacora):
             $user = $IAdmin->datos_usuario($bitacora['CuentaCodigo'], $bitacora['BitacoraTipo']);
             $user = $user->fetch();
@@ -97,7 +97,7 @@
                 </h4>
                 <strong><span class="cd-date"> <?php echo $bitacora['BitacoraTipo'];?></span></strong>
             </div>
-        </div>   
+        </div>
 
         <?php endforeach; ?>
     </section>

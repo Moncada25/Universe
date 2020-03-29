@@ -1,10 +1,4 @@
-<!-- Content page -->
-<div class="container-fluid">
-	<div class="page-header">
-	  <h1 class="text-titles"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</small></h1>
-	</div>
-</div>
-
+<br>
 <?php
 	$datos=explode("/", $_GET['views']);
 
@@ -40,7 +34,7 @@
                 <input type="hidden" name="CodigoCuenta-up" value="<?php echo $datos[2]; ?>">
                 <input type="hidden" name="TipoCuenta-up" value="<?php echo $lc->encryption($datos[1]); ?>'">
                 <fieldset>
-		    		<legend><i class="zmdi zmdi-key"></i> &nbsp; Datos del usuario</legend>
+		    		<legend><i class="zmdi zmdi-key"></i> &nbsp; Configuración</legend>
 		    		<div class="container-fluid">
 		    			<div class="row">
 		    				<div class="col-xs-12 col-sm-6">
@@ -124,8 +118,8 @@
 		    	</fieldset>
 		    	<br>
 		    	<fieldset>
-		    		<legend><i class="zmdi zmdi-lock"></i> &nbsp; Actualizar Contraseña</legend>
-					<p>Escribe tu contraseña dos veces para verificar el cambio.</p>
+		    		<legend><i class="zmdi zmdi-lock"></i> &nbsp; Actualizar contraseña</legend>
+					<p>Ingrese su nueva contraseña</p>
 		    		<div class="container-fluid">
 		    			<div class="row">
 		    				<div class="col-xs-12 col-sm-6">
@@ -212,7 +206,7 @@
 				<fieldset>
 		    		<legend><i class="zmdi zmdi-account-circle"></i> &nbsp; Preséntese</legend>
 		    		<p>
-						Para poder actualizar los datos de la cuenta por favor ingrese su nombre de usuario y contraseña.
+						Inicie sesión para confirmar los cambios
 		    		</p>
 		    		<div class="container-fluid">
 		    			<div class="row">

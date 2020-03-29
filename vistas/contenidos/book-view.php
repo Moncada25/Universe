@@ -1,12 +1,12 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Administración <small>NUEVO LIBRO</small></h1>
+        <h1 class="text-titles text-center"><small>AGREGAR LIBRO</small></h1>
     </div>
 </div>
 
-<?php 
-    require_once "./controladores/categoriaControlador.php"; 
-    $insCat = new categoriaControlador();    
+<?php
+    require_once "./controladores/categoriaControlador.php";
+    $insCat = new categoriaControlador();
 ?>
 
 <!-- Panel nuevo libro -->
@@ -67,9 +67,9 @@
                                 <div class="form-group label-floating">
                                     <label class="control-label">Categoría</label>
                                     <select name="categoria-reg" class="form-control">
-                                        <?php 
+                                        <?php
                                         $data = $insCat->datos_categoria_controlador();
-                                        
+
                                         foreach ($data as $categoria){?>
                                             <option value="<?php echo $categoria['CategoriaCodigo']; ?>"><?php echo $categoria['CategoriaNombre']; ?></option>
                             <?php  }
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                
+                    </div>
                 </fieldset>
                 <br>
                 <fieldset>

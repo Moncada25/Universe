@@ -4,7 +4,7 @@
             e.preventDefault();
             var Token = $(this).attr('href');
             swal({
-                title: '¿Estás seguro?',
+                title: '¿Desea continuar?',
                 text: "Tu sesión será cerrada.",
                 type: 'warning',
                 showCancelButton: true,
@@ -16,7 +16,7 @@
                 $.ajax({
                     url:'<?php echo SERVERURL; ?>ajax/loginAjax.php?Token='+Token,
                     success:function(data){
-                        
+
                         if(data=="true"){
                             window.location.href="<?php echo SERVERURL; ?>login/";
                         }else{

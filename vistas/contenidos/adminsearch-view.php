@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
+        <h1 class="text-titles text-center"><small>ADMINISTRADORES</small></h1>
     </div>
 </div>
 
@@ -30,7 +30,7 @@
     </ul>
 </div>
 
-<?php 
+<?php
     if(!isset($_SESSION['busqueda_admin']) AND empty($_SESSION['busqueda_admin'])):
 ?>
 
@@ -74,16 +74,16 @@
 <div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ADMINISTRADOR</h3>
+            <h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; RESULTADOS</h3>
         </div>
         <div class="panel-body">
-            <?php 
-                require_once "./controladores/administradorControlador.php"; 
+            <?php
+                require_once "./controladores/administradorControlador.php";
                 $insAdmin = new administradorControlador();
 
                 $pagina = explode("/", $_GET['views']);
                 echo $insAdmin->paginador_administrador_controlador($pagina[1], 10, $_SESSION['privilegio_sbp'], $_SESSION['codigo_cuenta_sbp'], $_SESSION['busqueda_admin']);
-            ?>  
+            ?>
         </div>
     </div>
 </div>

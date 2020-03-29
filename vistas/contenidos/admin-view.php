@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
+        <h1 class="text-titles text-center"><small>ADMINISTRADORES</small></h1>
     </div>
 </div>
 
@@ -139,7 +139,7 @@
                                 <?php
 
                                     if($_SESSION['privilegio_sbp'] == 1):
-                                
+
                                 ?>
 
                                 <div class="radio radio-primary">
@@ -150,7 +150,7 @@
                                 </div>
 
                                     <?php endif;
-                                    
+
                                     if($_SESSION['privilegio_sbp'] <= 2):
                                     ?>
 
