@@ -1,2 +1,0 @@
-Bookverse project
-
