@@ -14,17 +14,22 @@
 
 <div class="container-fluid text-center">
     <div class="btn-group">
-        <a href="<?php echo SERVERURL.'catalog/all/';?>" class="btn btn-default btn-raised">SELECCIONE UNA CATEORÍA</a>
-        <a data-target="dropdown-menu" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+        <a href="<?php echo SERVERURL.'catalog/all/';?>" class="btn btn-link btn-raised">SELECCIONE UNA CATEGORÍA</a>
+        <a data-target="dropdown-menu" class="btn btn-link btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
         <ul class="dropdown-menu drop" style="border-radius: 15px;">
         <li><a href="<?php echo SERVERURL.'catalog/all/';?>">Todas</a></li>
 
         <?php
             $data = $insCat->datos_categoria_controlador();
             foreach ($data as $categoria){
-                $cats[$categoria['CategoriaNombre']] = $categoria['CategoriaCodigo'];
+                $format = strtolower(mainModel::eliminar_acentos($categoria['CategoriaNombre']));
+                $cats[$format] = $categoria['CategoriaCodigo'];
                 ?>
-                <li><a href="<?php echo SERVERURL.'catalog/'.$categoria['CategoriaNombre']."/";?>"><?php echo $categoria['CategoriaNombre']; ?></a></li>
+                <li>
+                    <a href="<?php echo SERVERURL.'catalog/'.$format."/"?>">
+                        <?php echo $categoria['CategoriaNombre']; ?>
+                    </a>
+                </li>
 <?php  }
             ?>
         </ul>
@@ -50,9 +55,15 @@ if($datos[1] == "all"){ ?>
         </div>
     </div>
 
-<?php  }elseif($datos[1] == "Science" || $datos[1] == "Programming"){ ?>
+<?php  }elseif($datos[1] == "ciencia" || $datos[1] == "programacion"){
 
-    <h2 class="text-titles text-center">Categoría seleccionada <strong>"<?php  echo $datos[1]?>"</strong></h2>
+        if($datos[1] == "programacion"){
+            $nombre = "Programación";
+        }else if($datos[1] == "ciencia"){
+            $nombre = "Ciencia";
+        } ?>
+
+    <h2 class="text-titles text-center">Categoría seleccionada <strong>"<?php  echo $nombre?>"</strong></h2>
     <div class="container-fluid">
     <div class="panel panel-success">
         <div class="panel-heading">
@@ -85,18 +96,18 @@ if($datos[1] == "all"){ ?>
 </div>
 
 <script>
-$(function() {
-    $('.view-pdf').on('click', function() {
-        var pdf_link = $(this).attr('href');
-        var iframe = '<div class="iframe-container"><iframe src="' + pdf_link + '"></iframe></div>'
-        var titlulo = $(this).attr('value');
-        $.createModal({
-            title: titlulo,
-            message: iframe,
-            closeButton: true,
-            scrollable: false
+    $(function() {
+        $('.view-pdf').on('click', function() {
+            var pdf_link = $(this).attr('href');
+            var iframe = '<div class="iframe-container"><iframe src="' + pdf_link + '"></iframe></div>'
+            var titlulo = $(this).attr('value');
+            $.createModal({
+                title: titlulo,
+                message: iframe,
+                closeButton: true,
+                scrollable: false
+            });
+            return false;
         });
-        return false;
-    });
-})
+    })
 </script>

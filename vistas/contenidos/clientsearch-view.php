@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <div class="form-group label-floating">
-                    <span class="control-label">¿A quién estas buscando?</span>
+                    <span class="control-label">¿A quién estás buscando?</span>
                     <input class="form-control" type="text" name="busqueda_inicial_cliente" required="">
                 </div>
             </div>
