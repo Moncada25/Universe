@@ -24,54 +24,22 @@
     </ul>
 </div>
 
+<?php
+    require_once "./controladores/backlogControlador.php";
+    $insBacklog = new backlogControlador();
+?>
+
+<!-- Panel listado de tareas -->
 <div class="container-fluid">
     <div class="panel panel-warning">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; BACKLOG</h3>
+            <h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; BACKLOG</h3>
         </div>
         <div class="panel-body">
-            <form action="<?php echo SERVERURL; ?>ajax/backlogAjax.php" method="POST" data-form="save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
-                <fieldset>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group label-floating is-empty">
-                                    <label class="control-label">Tarea *</label>
-                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="nombre-reg" required="" maxlength="30">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group label-floating is-empty">
-                                    <label class="control-label">Puntos *</label>
-                                    <input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="2">
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group label-floating is-empty">
-                                    <label class="control-label">Descripción *</label>
-                                    <textarea name="direccion-reg" class="form-control" rows="2" maxlength="100"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Estado</label>
-                                    <select name="categoria-up" class="form-control" disabled>
-                                        <option value="Nueva" selected>Nueva</option>
-                                        <option value="Activa">Activa</option>
-                                        <option value="Impedimento">Impedimento</option>
-                                        <option value="Cerrada">Cerrada</option>
-                                        <option value="Remover">Remover</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <p class="text-center" style="margin-top: 20px;">
-                    <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
-                </p>
-                <div class="RespuestaAjax"></div>
-            </form>
+            <?php
+                $pagina = explode("/", $_GET['views']);
+                echo $insBacklog->paginador_tareas_controlador($pagina[1], 10, $_SESSION['codigo_cuenta_sbp'], "all");
+            ?>
         </div>
     </div>
 </div>

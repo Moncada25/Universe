@@ -195,7 +195,7 @@
 
                         if($privilegio<=2){
                             $tabla .= '<th class="text-center">A. CUENTA</th>
-                                            <th class="text-center">A. DATOS</th>';
+                                        <th class="text-center">A. DATOS</th>';
                         }
 
                         if($privilegio == 1){

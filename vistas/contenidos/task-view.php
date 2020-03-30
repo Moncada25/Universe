@@ -37,7 +37,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Tarea *</label>
-                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="tarea" id="tarea" required="" maxlength="30">
+                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,60}" class="form-control" type="text" name="tarea" id="tarea" required="" maxlength="60">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
@@ -57,7 +57,7 @@
                             <div class="col-xs-12">
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Descripción *</label>
-                                    <textarea name="descripcion" id="descripcion" class="form-control" rows="2" maxlength="100"></textarea>
+                                    <textarea name="descripcion" id="descripcion" class="form-control" rows="2" maxlength="500"></textarea>
                                 </div>
                             </div>
                         </div>

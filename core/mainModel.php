@@ -248,6 +248,36 @@
             return $cadena;
         }
 
+        public static function enviar_correo($asunto, $mensaje, $usuario){
+
+            include "../libs/PHPMailer-master/src/PHPMailer.php";
+            include "../libs/PHPMailer-master/src/SMTP.php";
+
+            $email_user = "packappsmysystems@gmail.com";
+            $email_password = "PackApps123**";
+            $the_subject = "Feedback by ".$usuario;
+            $address_to = "zanti4020@gmail.com";
+            $from_name = $asunto;
+            $phpmailer = new PHPMailer\PHPMailer\PHPMailer();
+            // ---------- datos de la cuenta de Gmail -------------------------------
+            $phpmailer->Username = $email_user;
+            $phpmailer->Password = $email_password;
+            //-----------------------------------------------------------------------
+            //$phpmailer->SMTPDebug = 1;
+            $phpmailer->SMTPSecure = 'ssl';
+            $phpmailer->Host = "smtp.gmail.com"; // GMail
+            $phpmailer->Port = 465;
+            $phpmailer->IsSMTP(); // use SMTP
+            $phpmailer->SMTPAuth = true;
+            $phpmailer->setFrom($phpmailer->Username, $from_name);
+            $phpmailer->AddAddress($address_to); // recipients email
+            $phpmailer->Subject = $the_subject;
+
+            $phpmailer->Body .= "<h2>" . $mensaje . "</h2>";
+            $phpmailer->IsHTML(true);
+            $phpmailer->Send();
+        }
+
         protected function sweet_alert($datos){
 
             if($datos['Alerta'] == "simple"){

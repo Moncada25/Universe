@@ -13,9 +13,9 @@ class githubControlador extends githubModelo{
     public function enviar_comentario_controlador(){
 
         if(isset($_POST['comentario-packapps'])){
-            $comentario = "PackApps\n" . mainModel::limpiar_cadena($_POST['comentario-packapps']);
+            $comentario = "About PackApps: " . mainModel::limpiar_cadena($_POST['comentario-packapps']);
         }else if(isset($_POST['comentario-bookverse'])){
-            $comentario = "Bookverse\n" . mainModel::limpiar_cadena($_POST['comentario-bookverse']);
+            $comentario = "About Bookverse: " . mainModel::limpiar_cadena($_POST['comentario-bookverse']);
         }
 
         $fecha = date("M") . " " . date("d") . ", " . date("Y"). " - " . date("H:i");
@@ -37,6 +37,8 @@ class githubControlador extends githubModelo{
                 "Texto" => "El comentario ha sido enviado exitosamente.",
                 "Tipo" => "success"
             ];
+
+            self::enviar_correo("Feedback",$comentario, $usuario);
 
         }else{
 
