@@ -3,11 +3,11 @@
     class vistasModelo{
 
         protected function obtener_vistas_modelo($vistas){
-            
+
             $listaBlanca = ["adminlist", "adminsearch", "admin", "book", "bookconfig", "bookinfo",
                         "catalog", "category", "categorylist", "client", "clientlist", "clientsearch",
-                        "home", "myaccount", "mydata", 
-                        "search", "registro", "github"];
+                        "home", "myaccount", "mydata",
+                        "search", "signup", "github", "task", "tasklist", "backlog"];
 
             if(in_array($vistas, $listaBlanca)){
 
@@ -17,10 +17,10 @@
                     $contenido = "login";
                 }
 
-                if($vistas == "registro"){
-                    $contenido = "registro";
+                if($vistas == "signup"){
+                    $contenido = "signup";
                 }
-                
+
             }elseif($vistas == "login"){
                 $contenido = "login";
             }elseif($vistas == "index"){

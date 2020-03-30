@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start(['name' => 'SBP']);
 ?>
 
@@ -15,7 +15,7 @@ session_start(['name' => 'SBP']);
 </head>
 <body>
 
-	<?php 
+	<?php
 
 		$peticionAjax = false;
 
@@ -24,19 +24,19 @@ session_start(['name' => 'SBP']);
 
 		require_once "./controladores/vistasControlador.php";
 		$vt = new vistasControlador();
-		
+
 		$vistasR = $vt->obtener_vistas_controlador();
 
-		if($vistasR == "login" || $vistasR == "404" || $vistasR == "registro"):
+		if($vistasR == "login" || $vistasR == "404" || $vistasR == "signup"):
 
-			if(isset($_SESSION['token_sbp']) && isset($_SESSION['usuario_sbp']) && ($vistasR == "login" || $vistasR == "registro")){
+			if(isset($_SESSION['token_sbp']) && isset($_SESSION['usuario_sbp']) && ($vistasR == "login" || $vistasR == "signup")){
 				echo $lc->redireccionar_usuario_controlador($_SESSION['tipo_sbp']);
 			}
 
 			if($vistasR == "login"){
 				require_once "./vistas/contenidos/login-view.php";
-			}elseif($vistasR == "registro"){
-				require_once "./vistas/contenidos/registro-view.php";
+			}elseif($vistasR == "signup"){
+				require_once "./vistas/contenidos/signup-view.php";
 			}else{
 				require_once "./vistas/contenidos/404-view.php";
 			}
@@ -56,16 +56,16 @@ session_start(['name' => 'SBP']);
 
 		<!-- NavBar -->
         <?php include "vistas/modulos/navbar.php"; ?>
-		
+
 		<!-- Content page -->
 		<?php require_once $vistasR; ?>
-		
+
 	</section>
 
 <?php include "./vistas/modulos/logoutScript.php";
 
 			endif; ?>
-		
+
 		<script>
 			$.material.init();
 		</script>

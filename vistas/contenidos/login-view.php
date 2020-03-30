@@ -17,7 +17,7 @@
             <div class="form-group text-center">
                 <input type="submit" value="Iniciar sesión" class="btn btn-info" style="color: #FFF;">
                 <br><small>¿No estás registrado?</small><br>
-                <a href="<?php echo SERVERURL;?>registro/"><input type="button" value="Regístrate" id="btnRegistrarNuevo" class="btn btn-info" style="color: #FFF;"></a>
+                <a href="<?php echo SERVERURL;?>signup/"><input type="button" value="Regístrate" id="btnRegistrarNuevo" class="btn btn-info" style="color: #FFF;"></a>
             </div>
         </form>
     </div>
@@ -29,7 +29,7 @@
         require_once "./controladores/loginControlador.php";
 
         $login = new loginControlador();
-        
+
         echo $login->iniciar_sesion_controlador();
     }
 ?>

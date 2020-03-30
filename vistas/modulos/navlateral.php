@@ -1,7 +1,7 @@
 <section class="full-box cover dashboard-sideBar">
     <div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
     <div class="full-box dashboard-sideBar-ct">
-        <!--SideBar Title --> 
+        <!--SideBar Title -->
         <div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
         <?php echo COMPANY; ?>
         </div>
@@ -79,6 +79,11 @@
             <li>
                 <a href="<?php echo SERVERURL; ?>catalog/all/">
                     <i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catálogo
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo SERVERURL; ?>task/">
+                    <i class="zmdi zmdi-lamp zmdi-hc-fw"></i> Backlog
                 </a>
             </li>
             <li>
