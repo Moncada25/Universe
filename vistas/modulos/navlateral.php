@@ -55,7 +55,7 @@
                 </a>
                 <ul class="list-unstyled full-box">
                     <li>
-                        <a href="<?php echo SERVERURL; ?>category/"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
+                        <a href="<?php echo SERVERURL; ?>categorylist/"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
                     </li>
                     <li>
                         <a href="<?php echo SERVERURL; ?>book/"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>
