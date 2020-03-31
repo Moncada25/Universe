@@ -4,12 +4,7 @@
     }
 ?>
 
-<div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles text-center"><small>ADMINISTRADORES</small></h1>
-    </div>
-</div>
-
+<br>
 <div class="container-fluid">
     <ul class="breadcrumb breadcrumb-tabs">
         <li>

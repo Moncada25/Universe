@@ -1,23 +1,18 @@
+<br>
 <div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles text-center"><small>CATEGORÍAS DE LIBROS</small></h1>
-    </div>
+    <ul class="breadcrumb breadcrumb-tabs">
+        <li>
+            <a href="<?php echo SERVERURL?>category/" class="btn btn-info">
+                <i class="zmdi zmdi-plus"></i> &nbsp; NUEVA CATEGORÍA
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo SERVERURL?>categorylist/" class="btn btn-success">
+                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE CATEGORÍAS
+            </a>
+        </li>
+    </ul>
 </div>
-
-    <div class="container-fluid">
-        <ul class="breadcrumb breadcrumb-tabs">
-            <li>
-                <a href="<?php echo SERVERURL?>category/" class="btn btn-info">
-                    <i class="zmdi zmdi-plus"></i> &nbsp; NUEVA CATEGORÍA
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo SERVERURL?>categorylist/" class="btn btn-success">
-                    <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE CATEGORÍAS
-                </a>
-            </li>
-        </ul>
-    </div>
 
 <!-- Panel nueva categoria -->
 <div class="container-fluid">
