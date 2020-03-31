@@ -1,27 +1,21 @@
-<div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i> Ajustes <small>LIBRO</small></h1>
-    </div>
-</div>
+<?php
+    require_once "./controladores/categoriaControlador.php";
+    $insCat = new categoriaControlador();
 
-<?php 
-    require_once "./controladores/categoriaControlador.php"; 
-    $insCat = new categoriaControlador();    
-
-    require_once "./controladores/libroControlador.php"; 
-    $insLibro = new libroControlador();    
+    require_once "./controladores/libroControlador.php";
+    $insLibro = new libroControlador();
 
     $datos = explode("/", $_GET['views']);
 
     $libro = $insLibro->datos_libro_controlador("Unico", $datos[1]);
     $libro = $libro->fetch();
 ?>
-
+<br>
 <!-- Tabla de adjuntos -->
 <div class="container-fluid">
     <div class="panel panel-warning">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-attachment-alt"></i> &nbsp; GESTIONAR ADJUNTOS</h3>
+            <h3 class="panel-title text-center">GESTIONAR ADJUNTOS</h3>
         </div>
         <div class="panel-body">
             <div class="table-responsive">
@@ -71,7 +65,7 @@
 <div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; ACTUALIZAR LIBRO</h3>
+            <h3 class="panel-title text-center">ACTUALIZAR LIBRO</h3>
         </div>
         <div class="panel-body">
             <form action="<?php echo SERVERURL; ?>ajax/libroAjax.php" method="POST" data-form="update" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
@@ -125,11 +119,11 @@
                                 <div class="form-group label-floating">
                                     <label class="control-label">Categoría</label>
                                     <select name="categoria-up" class="form-control">
-                                        <?php 
+                                        <?php
                                         $data = $insCat->datos_categoria_controlador();
 
                                         foreach ($data as $categoria){
-                                            
+
                                             if($libro['CategoriaCodigo'] != $categoria['CategoriaCodigo']){ ?>
                                                 <option value="<?php echo $categoria['CategoriaCodigo']; ?>"><?php echo $categoria['CategoriaNombre']; ?></option>
                 <?php                  }else{ ?>
@@ -152,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                </div>      
+                </div>
                 <br>
                 <div class="col-xs-12 col-sm-6">
                     <div class="form-group">
@@ -188,7 +182,7 @@
         <div class="col-xs-12">
             <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="zmdi zmdi-delete"></i> &nbsp; ELIMINAR LIBRO</h3>
+                    <h3 class="panel-title text-center">ELIMINAR LIBRO</h3>
                 </div>
                 <div class="panel-body">
                     <p class="lead">
@@ -199,7 +193,7 @@
                         <p class="text-center">
                             <button class="btn btn-raised btn-danger">
                                 <i class="zmdi zmdi-delete"></i> &nbsp; ELIMINAR DEL SISTEMA
-                            </button>	
+                            </button>
                         </p>
                     </form>
                 </div>

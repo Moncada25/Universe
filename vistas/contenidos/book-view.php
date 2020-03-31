@@ -1,19 +1,14 @@
-<div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles text-center"><small>AGREGAR LIBRO</small></h1>
-    </div>
-</div>
-
 <?php
     require_once "./controladores/categoriaControlador.php";
     $insCat = new categoriaControlador();
 ?>
 
+<br>
 <!-- Panel nuevo libro -->
 <div class="container-fluid">
     <div class="panel panel-info">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO LIBRO</h3>
+            <h3 class="panel-title text-center">AGREGAR LIBRO</h3>
         </div>
         <div class="panel-body">
             <form action="<?php echo SERVERURL; ?>ajax/libroAjax.php" method="POST" data-form="save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">

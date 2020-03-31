@@ -108,7 +108,7 @@
 
                 <div class="panel panel-success">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MIS DATOS</h3>
+                            <h3 class="panel-title text-center">MIS DATOS</h3>
                         </div>
                         <div class="panel-body">
                             <form action="<?php echo SERVERURL; ?>ajax/clienteAjax.php" method="POST" data-form="update" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">

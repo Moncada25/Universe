@@ -6,12 +6,7 @@
     $datos=explode("/", $_GET['views']);
 ?>
 
-<div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles text-center"><small>CATÁLOGO</small></h1>
-    </div>
-</div>
-
+<br>
 <div class="container-fluid text-center">
     <div class="btn-group">
         <a href="<?php echo SERVERURL.'catalog/all/';?>" class="btn btn-link btn-raised">SELECCIONE UNA CATEGORÍA</a>
@@ -44,7 +39,7 @@ if($datos[1] == "all"){ ?>
     <div class="container-fluid">
     <div class="panel panel-success">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-book"></i> &nbsp; LIBROS DISPONIBLES</h3>
+            <h3 class="panel-title text-center">LIBROS DISPONIBLES</h3>
         </div>
         <div class="panel-body">
             <?php

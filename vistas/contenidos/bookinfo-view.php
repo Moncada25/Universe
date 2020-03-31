@@ -1,12 +1,6 @@
-<div class="container-fluid">
-    <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Información <small>LIBRO</small></h1>
-    </div>
-</div>
-
-<?php 
-    require_once "./controladores/libroControlador.php"; 
-    $insLibro = new libroControlador();    
+<?php
+    require_once "./controladores/libroControlador.php";
+    $insLibro = new libroControlador();
 
     $datos = explode("/", $_GET['views']);
 
@@ -14,11 +8,12 @@
     $libro = $libro->fetch();
 ?>
 
+<br>
 <!-- Panel info libro -->
 <div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-info"></i> &nbsp; <?php echo $libro['LibroTitulo']; ?></h3>
+            <h3 class="panel-title text-center"><?php echo $libro['LibroTitulo']; ?></h3>
         </div>
         <div class="panel-body">
             <fieldset>
