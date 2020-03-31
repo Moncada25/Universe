@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     if($peticionAjax){
         require_once "../core/mainModel.php";
@@ -10,8 +10,8 @@
 
         protected function agreagar_cliente_modelo($datos){
 
-            $sql = mainModel::conectar()->prepare("INSERT INTO 
-            cliente(ClienteNombre, ClienteApellido, ClienteTelefono, ClienteOcupacion, ClienteDireccion, CuentaCodigo) 
+            $sql = mainModel::conectar()->prepare("INSERT INTO
+            cliente(ClienteNombre, ClienteApellido, ClienteTelefono, ClienteOcupacion, ClienteDireccion, CuentaCodigo)
             VALUES(:Nombre, :Apellido, :Telefono, :Ocupacion, :Direccion, :Codigo)");
 
             $sql->bindParam(":Nombre", $datos['Nombre']);
@@ -28,7 +28,6 @@
         protected function eliminar_cliente_modelo($codigo){
 
             $query = mainModel::conectar()->prepare("DELETE FROM cliente WHERE CuentaCodigo = :Codigo");
-        
             $query->bindParam(":Codigo", $codigo);
             $query->execute();
 
@@ -51,8 +50,8 @@
 
         protected function actualizar_cliente_modelo($datos){
 
-            $query = mainModel::conectar()->prepare("UPDATE cliente 
-            SET ClienteNombre = :Nombre, ClienteApellido = :Apellido, ClienteTelefono = :Telefono, ClienteDireccion = :Direccion 
+            $query = mainModel::conectar()->prepare("UPDATE cliente
+            SET ClienteNombre = :Nombre, ClienteApellido = :Apellido, ClienteTelefono = :Telefono, ClienteDireccion = :Direccion
             WHERE CuentaCodigo = :Codigo");
 
             $query->bindParam(":Nombre", $datos['Nombre']);

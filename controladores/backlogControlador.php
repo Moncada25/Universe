@@ -216,33 +216,61 @@ class backlogControlador extends backlogModelo{
         $estado = mainModel::limpiar_cadena($_POST['estado-act']);
         $codigo = mainModel::limpiar_cadena($_POST['id-tarea']);
 
-        $data = [
-            "Codigo" => $codigo,
-            "Tarea" => $tarea,
-            "Puntos" => $puntos,
-            "Descripcion" => $descricion,
-            "Estado" => $estado
-        ];
+        if($estado == "Remover"){
 
-        $actualizarTarea = backlogModelo::actualizar_tarea_modelo($data);
+            $eliminarTarea = backlogModelo::eliminar_tarea_modelo($codigo);
 
-        if($actualizarTarea->rowCount() == 1){
+            if($eliminarTarea->rowCount() == 1){
 
-            $alerta = [
-                "Alerta" => "recargar",
-                "Titulo" => "¡Tarea actualizada!",
-                "Texto" => "La tarea ha sido actualizada exitosamente al backlog.",
-                "Tipo" => "success"
-            ];
+                $alerta = [
+                    "Alerta" => "recargar",
+                    "Titulo" => "¡Tarea eliminada!",
+                    "Texto" => "La tarea ha sido eliminada exitosamente del backlog.",
+                    "Tipo" => "success"
+                ];
+
+                echo '<script> window.location.href="'.SERVERURL.'tasklist/" </script>';
+
+            }else{
+
+                $alerta = [
+                    "Alerta" => "simple",
+                    "Titulo" => "Ocurrió un error inesperado",
+                    "Texto" => "No hemos podido eliminar la tarea, por favor intente nuevamente.",
+                    "Tipo" => "error"
+                ];
+            }
 
         }else{
 
-            $alerta = [
-                "Alerta" => "simple",
-                "Titulo" => "Ocurrió un error inesperado",
-                "Texto" => "No hemos podido actualizar la tarea, por favor intente nuevamente.",
-                "Tipo" => "error"
+            $data = [
+                "Codigo" => $codigo,
+                "Tarea" => $tarea,
+                "Puntos" => $puntos,
+                "Descripcion" => $descricion,
+                "Estado" => $estado
             ];
+
+            $actualizarTarea = backlogModelo::actualizar_tarea_modelo($data);
+
+            if($actualizarTarea->rowCount() == 1){
+
+                $alerta = [
+                    "Alerta" => "recargar",
+                    "Titulo" => "¡Tarea actualizada!",
+                    "Texto" => "La tarea ha sido actualizada exitosamente.",
+                    "Tipo" => "success"
+                ];
+
+            }else{
+
+                $alerta = [
+                    "Alerta" => "simple",
+                    "Titulo" => "Ocurrió un error inesperado",
+                    "Texto" => "No hemos podido actualizar la tarea, verifica que sí hayan cambios para actualizar.",
+                    "Tipo" => "error"
+                ];
+            }
         }
 
         return mainModel::sweet_alert($alerta);

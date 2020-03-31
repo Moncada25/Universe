@@ -51,4 +51,13 @@
 
             return $query;
         }
+
+        protected function eliminar_tarea_modelo($codigo){
+
+            $query = mainModel::conectar()->prepare("DELETE FROM task WHERE ID = :Codigo");
+            $query->bindParam(":Codigo", $codigo);
+            $query->execute();
+
+            return $query;
+        }
     }
