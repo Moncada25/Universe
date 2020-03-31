@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="panel panel-danger">
         <div class="panel-heading">
-            <h3 class="panel-title text-center">Bookverse</h3>
+            <h3 class="panel-title text-center">BOOKVERSE</h3>
         </div>
         <div class="panel-body">
            <form action="<?php echo SERVERURL; ?>ajax/githubAjax.php" method="POST" data-form="save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
@@ -48,7 +48,7 @@
 <div class="container-fluid">
     <div class="panel panel-success">
         <div class="panel-heading">
-            <h3 class="panel-title text-center">PackApps</h3>
+            <h3 class="panel-title text-center">PACKAPPS</h3>
         </div>
         <div class="panel-body">
             <form action="<?php echo SERVERURL; ?>ajax/githubAjax.php" method="POST" data-form="save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">

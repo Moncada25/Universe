@@ -14,14 +14,14 @@
             $campos = $filesC->fetch();
 ?>
 <div class="container-fluid">
-	<div class="panel panel-primary">
+	<div class="panel panel-danger">
 		<div class="panel-heading">
-			<h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MI CUENTA</h3>
+			<h3 class="panel-title text-center">MI CUENTA</h3>
 		</div>
 		<div class="panel-body">
 			<form action="<?php echo SERVERURL; ?>ajax/cuentaAjax.php" method="POST" data-form="update" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
-                
-                <?php 
+
+                <?php
                     if($_SESSION['codigo_cuenta_sbp'] != $campos['CuentaCodigo']){
 
                         if($_SESSION['tipo_sbp'] != "Administrador" || $_SESSION['privilegio_sbp'] < 1 || $_SESSION['codigo_cuenta_sbp'] > 2){
@@ -54,8 +54,8 @@
 									<label class="control-label">Genero</label>
 									<div class="radio radio-primary">
 										<label>
-                                            <input type="radio" name="optionsGenero-up" 
-                                            <?php 
+                                            <input type="radio" name="optionsGenero-up"
+                                            <?php
                                             if($campos['CuentaGenero'] == "Masculino"){
                                                 echo 'checked="" ';
                                             }?>
@@ -66,7 +66,7 @@
 									<div class="radio radio-primary">
 										<label>
                                             <input type="radio" name="optionsGenero-up"
-                                            <?php 
+                                            <?php
                                             if($campos['CuentaGenero'] == "Femenino"){
                                                 echo 'checked="" ';
                                             }?>
@@ -76,7 +76,7 @@
 									</div>
 								</div>
                             </div>
-                            
+
                             <?php
                                 if($_SESSION['tipo_sbp'] == "Administrador" && $_SESSION['privilegio_sbp'] == 1 && $campos['id'] != 1):
                             ?>
@@ -87,7 +87,7 @@
 									<div class="radio radio-primary">
 										<label>
                                             <input type="radio" name="optionsEstado-up"
-                                            <?php 
+                                            <?php
                                             if($campos['CuentaEstado'] == "Activo"){
                                                 echo 'checked="" ';
                                             }?>
@@ -98,7 +98,7 @@
 									<div class="radio radio-primary">
 										<label>
                                             <input type="radio" name="optionsEstado-up"
-                                            <?php 
+                                            <?php
                                             if($campos['CuentaEstado'] == "Deshabilitado"){
                                                 echo 'checked="" ';
                                             }?>
@@ -108,7 +108,7 @@
 									</div>
 								</div>
                             </div>
-                            
+
                             <?php
                                 endif;
                             ?>
@@ -137,7 +137,7 @@
 		    			</div>
 		    		</div>
 		    	</fieldset>
-                
+
                 <?php
                     if($_SESSION['tipo_sbp'] == "Administrador" && $_SESSION['privilegio_sbp'] == 1 && $campos['id'] != 1 && $campos['CuentaTipo'] == "Administrador" && $datos[1] == "admin"):
                 ?>
@@ -226,7 +226,7 @@
 		    		</div>
 		    	</fieldset>
 			    <p class="text-center" style="margin-top: 20px;">
-			    	<button type="submit" class="btn btn-primary btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
+			    	<button type="submit" class="btn btn-danger btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
 			    </p>
 				<div class="RespuestaAjax"></div>
 		    </form>

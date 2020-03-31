@@ -7,7 +7,7 @@
 
         //ADMINISTRADOR
         if($datos[1] == "admin"){
-    
+
             if($_SESSION['tipo_sbp'] != "Administrador"){
                 echo $lc->forzar_cierre_sesion_controlador();
             }
@@ -18,8 +18,8 @@
 
             $filesA = $classAdmin->datos_administrador_controlador("Unico", $datos[2]);
 
-            if($filesA->rowCount() == 1){ 
-                
+            if($filesA->rowCount() == 1){
+
                 $campos = $filesA->fetch();
 
                 if($campos['CuentaCodigo'] != $_SESSION['codigo_cuenta_sbp']){
@@ -30,10 +30,10 @@
                 }
 
                 ?>
- 
-                <div class="panel panel-primary">
+
+                <div class="panel panel-success">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MIS DATOS</h3>
+                            <h3 class="panel-title text-center">MIS DATOS</h3>
                         </div>
                         <div class="panel-body">
                             <form action="<?php echo SERVERURL; ?>ajax/administradorAjax.php" method="POST" data-form="update" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
@@ -70,7 +70,7 @@
                                     </div>
                                 </fieldset>
                                 <p class="text-center" style="margin-top: 20px;">
-                                    <button type="submit" class="btn btn-primary btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
+                                    <button type="submit" class="btn btn-success btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
                                 </p>
                                 <div class="RespuestaAjax"></div>
                             </form>
@@ -83,7 +83,7 @@
                 <p>No podemos mostrar la información solicitada</p>
 
 <?php }
-    
+
         //USUARIO
         }elseif($datos[1] == "user"){
 
@@ -93,8 +93,8 @@
 
             $filesC = $classCliente->datos_cliente_controlador("Unico", $datos[2]);
 
-            if($filesC->rowCount() == 1){ 
-                
+            if($filesC->rowCount() == 1){
+
                 $campos = $filesC->fetch();
 
                 if($campos['CuentaCodigo'] != $_SESSION['codigo_cuenta_sbp']){
@@ -105,7 +105,7 @@
                 }
 
                 ?>
- 
+
                 <div class="panel panel-success">
                         <div class="panel-heading">
                             <h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MIS DATOS</h3>

@@ -202,4 +202,49 @@ class backlogControlador extends backlogModelo{
         return $tabla;
     }
 
+    public function datos_tarea_controlador($id){
+
+        $codigo = mainModel::limpiar_cadena($id);
+        return backlogModelo::datos_tarea_modelo($codigo);
+    }
+
+    public function actualizar_tarea_controlador(){
+
+        $tarea = mainModel::limpiar_cadena($_POST['tarea-act']);
+        $puntos = mainModel::limpiar_cadena($_POST['puntos-act']);
+        $descricion = mainModel::limpiar_cadena($_POST['descripcion-act']);
+        $estado = mainModel::limpiar_cadena($_POST['estado-act']);
+        $codigo = mainModel::limpiar_cadena($_POST['id-tarea']);
+
+        $data = [
+            "Codigo" => $codigo,
+            "Tarea" => $tarea,
+            "Puntos" => $puntos,
+            "Descripcion" => $descricion,
+            "Estado" => $estado
+        ];
+
+        $actualizarTarea = backlogModelo::actualizar_tarea_modelo($data);
+
+        if($actualizarTarea->rowCount() == 1){
+
+            $alerta = [
+                "Alerta" => "recargar",
+                "Titulo" => "¡Tarea actualizada!",
+                "Texto" => "La tarea ha sido actualizada exitosamente al backlog.",
+                "Tipo" => "success"
+            ];
+
+        }else{
+
+            $alerta = [
+                "Alerta" => "simple",
+                "Titulo" => "Ocurrió un error inesperado",
+                "Texto" => "No hemos podido actualizar la tarea, por favor intente nuevamente.",
+                "Tipo" => "error"
+            ];
+        }
+
+        return mainModel::sweet_alert($alerta);
+    }
 }

@@ -82,7 +82,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?php echo SERVERURL; ?>task/">
+                <a href="<?php echo SERVERURL; ?>tasklist/">
                     <i class="zmdi zmdi-lamp zmdi-hc-fw"></i> Backlog
                 </a>
             </li>

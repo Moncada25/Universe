@@ -278,12 +278,6 @@
             $phpmailer->Send();
         }
 
-        public static function mostrar_modal($id){
-
-
-
-        }
-
         protected function sweet_alert($datos){
 
             if($datos['Alerta'] == "simple"){
