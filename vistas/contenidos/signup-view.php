@@ -1,14 +1,10 @@
+<br>
 <div class="efecto-arriba myScroll">
-    <div class="container-fluid">
-        <div class="page-header">
-            <h3 class="text-center">Welcome to Bookverse</h3>
-        </div>
-    </div>
     <!-- Panel nuevo cliente -->
     <div class="container-fluid">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVA CUENTA</h3>
+                <h3 class="panel-title text-center">NUEVA CUENTA</h3>
             </div>
             <div class="panel-body">
                 <form action="<?php echo SERVERURL; ?>ajax/clienteAjax.php" method="POST" data-form="save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
