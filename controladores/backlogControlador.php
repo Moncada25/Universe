@@ -20,7 +20,18 @@ class backlogControlador extends backlogModelo{
         $usuario = $_SESSION['nombre_sbp'] . " " . $_SESSION['apellido_sbp'] . " (" . $_SESSION['usuario_sbp'] . ")";
         $cuenta = $_SESSION['codigo_cuenta_sbp'];
 
-        $data = [
+        if($estado != "Nueva"){
+
+            $alerta = [
+                "Alerta" => "recargar",
+                "Titulo" => "Ocurrió un error inesperado",
+                "Texto" => "La información sumistrada no es válida.",
+                "Tipo" => "error"
+            ];
+
+        }else{
+
+            $data = [
             "Usuario" => $usuario,
             "Tarea" => $tarea,
             "Puntos" => $puntos,
@@ -28,27 +39,28 @@ class backlogControlador extends backlogModelo{
             "Estado" => $estado,
             "Fecha" => $fecha,
             "Cuenta" => $cuenta
-        ];
-
-        $guardarTarea = backlogModelo::agregar_tarea_modelo($data);
-
-        if($guardarTarea->rowCount() == 1){
-
-            $alerta = [
-                "Alerta" => "limpiar",
-                "Titulo" => "¡Tarea agregada!",
-                "Texto" => "La tarea ha sido agregada exitosamente al backlog.",
-                "Tipo" => "success"
             ];
 
-        }else{
+            $guardarTarea = backlogModelo::agregar_tarea_modelo($data);
 
-            $alerta = [
-                "Alerta" => "simple",
-                "Titulo" => "Ocurrió un error inesperado",
-                "Texto" => "No hemos podido agregar la tarea, por favor intente nuevamente.",
-                "Tipo" => "error"
-            ];
+            if($guardarTarea->rowCount() == 1){
+
+                $alerta = [
+                    "Alerta" => "limpiar",
+                    "Titulo" => "¡Tarea agregada!",
+                    "Texto" => "La tarea ha sido agregada exitosamente al backlog.",
+                    "Tipo" => "success"
+                ];
+
+            }else{
+
+                $alerta = [
+                    "Alerta" => "simple",
+                    "Titulo" => "Ocurrió un error inesperado",
+                    "Texto" => "No hemos podido agregar la tarea, por favor intente nuevamente.",
+                    "Tipo" => "error"
+                ];
+            }
         }
 
         return mainModel::sweet_alert($alerta);
@@ -216,7 +228,17 @@ class backlogControlador extends backlogModelo{
         $estado = mainModel::limpiar_cadena($_POST['estado-act']);
         $codigo = mainModel::limpiar_cadena($_POST['id-tarea']);
 
-        if($estado == "Remover"){
+        if($estado != "Nueva" && $estado != "Activa" && $estado != "Impedimento" && $estado != "Cerrada" && $estado != "Remover"){
+
+            $alerta = [
+                "Alerta" => "recargar",
+                "Titulo" => "Ocurrió un error inesperado",
+                "Texto" => "La información sumistrada no es válida.",
+                "Tipo" => "error"
+            ];
+        }else{
+
+            if($estado == "Remover"){
 
             $eliminarTarea = backlogModelo::eliminar_tarea_modelo($codigo);
 
@@ -241,35 +263,36 @@ class backlogControlador extends backlogModelo{
                 ];
             }
 
-        }else{
-
-            $data = [
-                "Codigo" => $codigo,
-                "Tarea" => $tarea,
-                "Puntos" => $puntos,
-                "Descripcion" => $descricion,
-                "Estado" => $estado
-            ];
-
-            $actualizarTarea = backlogModelo::actualizar_tarea_modelo($data);
-
-            if($actualizarTarea->rowCount() == 1){
-
-                $alerta = [
-                    "Alerta" => "recargar",
-                    "Titulo" => "¡Tarea actualizada!",
-                    "Texto" => "La tarea ha sido actualizada exitosamente.",
-                    "Tipo" => "success"
-                ];
-
             }else{
 
-                $alerta = [
-                    "Alerta" => "simple",
-                    "Titulo" => "Ocurrió un error inesperado",
-                    "Texto" => "No hemos podido actualizar la tarea, verifica que sí hayan cambios para actualizar.",
-                    "Tipo" => "error"
+                $data = [
+                    "Codigo" => $codigo,
+                    "Tarea" => $tarea,
+                    "Puntos" => $puntos,
+                    "Descripcion" => $descricion,
+                    "Estado" => $estado
                 ];
+
+                $actualizarTarea = backlogModelo::actualizar_tarea_modelo($data);
+
+                if($actualizarTarea->rowCount() == 1){
+
+                    $alerta = [
+                        "Alerta" => "recargar",
+                        "Titulo" => "¡Tarea actualizada!",
+                        "Texto" => "La tarea ha sido actualizada exitosamente.",
+                        "Tipo" => "success"
+                    ];
+
+                }else{
+
+                    $alerta = [
+                        "Alerta" => "simple",
+                        "Titulo" => "Ocurrió un error inesperado",
+                        "Texto" => "No hemos podido actualizar la tarea, verifica que sí hayan cambios para actualizar.",
+                        "Tipo" => "error"
+                    ];
+                }
             }
         }
 
