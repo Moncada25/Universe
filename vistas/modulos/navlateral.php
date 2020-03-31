@@ -68,10 +68,10 @@
                 </a>
                 <ul class="list-unstyled full-box">
                     <li>
-                        <a href="<?php echo SERVERURL; ?>admin/"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+                        <a href="<?php echo SERVERURL; ?>adminlist/"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
                     </li>
                     <li>
-                        <a href="<?php echo SERVERURL; ?>client/"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
+                        <a href="<?php echo SERVERURL; ?>clientlist/"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
                     </li>
                 </ul>
             </li>
