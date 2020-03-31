@@ -107,7 +107,11 @@ class backlogControlador extends backlogModelo{
                             <th class="text-center">DESCRIPCIÓN</th>
                             <th class="text-center">PUNTOS</th>
                             <th class="text-center">ESTADO</th>
-                            <th class="text-center">FECHA</th>
+                            <th class="text-center">FECHA</th>';
+                            if($busqueda == ""){
+                                $tabla .= '<th class="text-center">EDITAR</th>';
+                            }
+                        $tabla .= '
                         </tr>
                     </thead>
                 <tbody>';
@@ -129,6 +133,15 @@ class backlogControlador extends backlogModelo{
                                 <td>'.$rows['Points'].'</td>
                                 <td>'.$rows['Status'].'</td>
                                 <td>'.$rows['Date'].'</td>';
+
+                            if($busqueda == ""){
+                                $tabla .= '
+                                <td>
+                                    <a href="'.SERVERURL.'editbacklog/'.mainModel::encryption($rows['ID']).'" class="btn btn-info btn-raised btn-xs">
+                                        <i class="zmdi zmdi-refresh"></i>
+                                    </a>
+                                </td>';
+                            }
 
                         $tabla .= '</tr>';
                         $contador++;
@@ -188,4 +201,5 @@ class backlogControlador extends backlogModelo{
             }
         return $tabla;
     }
+
 }

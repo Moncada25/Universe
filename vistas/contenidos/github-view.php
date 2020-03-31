@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-xs-4">
                         <p class="text-center">
-                            <a href="https://mega.nz/#F!1E1SQKST!yBXhMg1ZHbrCHSgRm6nw3A" target="_blank"><input type="button" id="linkPackApps" value="PackApps" class="btn btn-link btn-raised btn-sm"></a>
+                            <a href="https://mega.nz/#F!1E1SQKST!yBXhMg1ZHbrCHSgRm6nw3A" target="_blank"><input type="button" id="linkPackApps" value="App" class="btn btn-link btn-raised btn-sm"></a>
                         </p>
                     </div>
                     <div class="col-xs-4">

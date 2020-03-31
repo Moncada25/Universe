@@ -28,7 +28,7 @@ Library with educational content
     * Downloads of some projects
     * Donations to developers
     * ...
-       
+
 #### New features!
 
   - GitHub module
@@ -54,8 +54,9 @@ Bookverse requires a browser and xampp to run in localhost:
 
 ```sh
 start xampp control panel
+import database
 move project to xampp/htdocs
-open http://localhost/Bookverse en your browser 
+open http://localhost/Bookverse en your browser
 ```
 
 #### Development
@@ -67,7 +68,7 @@ Do you want to contribute? Great!
 
  - Write more tests.
  - Add more books.
- 
+
 #### License
 
 **Free Software, Hell Yeah!**

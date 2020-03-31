@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     if($peticionAjax){
         require_once "../modelos/libroModelo.php";
@@ -36,13 +36,13 @@
 
                 $folderPDF = "../adjuntos/books/";
                 $folderIMG = "../adjuntos/images/";
-                //datos de la imagen 
-                $nombre_imagen = $_FILES['imagen-reg']['name']; 
-                $tamano_imagen = $_FILES['imagen-reg']['size']; 
+                //datos de la imagen
+                $nombre_imagen = $_FILES['imagen-reg']['name'];
+                $tamano_imagen = $_FILES['imagen-reg']['size'];
 
-                 //datos del PDF 
-                 $nombre_pdf = $_FILES['pdf-reg']['name']; 
-                 $tamano_pdf = $_FILES['pdf-reg']['size']; 
+                 //datos del PDF
+                 $nombre_pdf = $_FILES['pdf-reg']['name'];
+                 $tamano_pdf = $_FILES['pdf-reg']['size'];
 
                 if((substr($nombre_imagen,-4) == "jpeg" || substr($nombre_imagen,-3) == "jpg" || substr($nombre_imagen,-3) == "png") && $tamano_imagen < 5000000){
 
@@ -65,8 +65,8 @@
 
                         $guardarLibro = libroModelo::agregar_libro_modelo($dataL);
 
-                        if (move_uploaded_file($_FILES['imagen-reg']['tmp_name'], $folderIMG . $nombre_imagen) && move_uploaded_file($_FILES['pdf-reg']['tmp_name'], $folderPDF . $nombre_pdf) && $guardarLibro->rowCount() >=1){ 
-                            
+                        if (move_uploaded_file($_FILES['imagen-reg']['tmp_name'], $folderIMG . $nombre_imagen) && move_uploaded_file($_FILES['pdf-reg']['tmp_name'], $folderPDF . $nombre_pdf) && $guardarLibro->rowCount() >=1){
+
                             $alerta = [
                                 "Alerta" => "recargar",
                                 "Titulo" => "¡Libro guardado!",
@@ -74,14 +74,14 @@
                                 "Tipo" => "success"
                             ];
 
-                        }else{ 
+                        }else{
                             $alerta = [
                                 "Alerta" => "simple",
                                 "Titulo" => "Ocurrió un error inesperado",
                                 "Texto" => "Los archivos no pudieron guardarse, por favor intente nuevamente.",
                                 "Tipo" => "error"
                             ];
-                        } 
+                        }
 
                     }else{
                         $alerta = [
@@ -118,14 +118,14 @@
             $inicio = ($pagina > 0) ? (($pagina * $registros) - $registros) : 0;
 
             if(isset($busqueda) && $busqueda != ""){
-                $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM libro 
+                $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM libro
                 WHERE  (LibroTitulo LIKE '%$busqueda%' OR LibroAutor LIKE '%$busqueda%')
                 ORDER BY LibroTitulo ASC LIMIT $inicio, $registros";
 
                 $paginaurl = "search";
             }elseif(isset($categoria) && $categoria != ""){
                 $consulta = "SELECT SQL_CALC_FOUND_ROWS * FROM libro
-                WHERE CategoriaCodigo = '$categoria' 
+                WHERE CategoriaCodigo = '$categoria'
                 ORDER BY LibroTitulo ASC LIMIT $inicio, $registros";
 
                 $paginaurl = "catalog/".$nombre;
@@ -146,7 +146,7 @@
             $total = (int) $total->fetchColumn();
 
             $Npaginas = ceil($total/$registros);
- 
+
             $tabla .= '
             <div class="table-responsive">
                 <table class="table table-hover text-center">
@@ -180,13 +180,14 @@
                                 <a href='.SERVERURL.'bookinfo/'. mainModel::encryption($rows["LibroCodigo"]).' data-title="Más información"><i class="zmdi zmdi-info zmdi-hc-2x"></i></a>
                             </td>
                             <td>
-                                <a value="'.$rows['LibroTitulo'].'" class="view-pdf" href="'.SERVERURL.'adjuntos/books/'.$rows['LibroPDF'].'" data-title="Abrir PDF"><i class="zmdi zmdi-file zmdi-hc-2x"></i></a>
+                                <a value="'.$rows['LibroTitulo'].'" class="view-pdf" href="'.SERVERURL.'files/books/'.$rows['LibroPDF'].'" data-title="Abrir PDF"><i class="zmdi zmdi-file zmdi-hc-2x"></i></a>
                             </td>';
 
                             if($privilegio == 1){
-                                $tabla .= '<td>
-                                                    <a href='.SERVERURL.'bookconfig/'. mainModel::encryption($rows["LibroCodigo"]).' data-title="Ajustes"><i class="zmdi zmdi-wrench zmdi-hc-2x"></i></a>
-                                                </td>';
+                                $tabla .= '
+                            <td>
+                                <a href='.SERVERURL.'bookconfig/'. mainModel::encryption($rows["LibroCodigo"]).' data-title="Ajustes"><i class="zmdi zmdi-wrench zmdi-hc-2x"></i></a>
+                            </td>';
                             }
 
                         $tabla .= '</tr>';
@@ -211,7 +212,7 @@
                                 <td colspan="8"> No hay registros en el sistema. </td>
                             </tr>
                         ';
-                    }     
+                    }
                 }
 
             $tabla .= '</tbody></table></div>';
@@ -228,7 +229,7 @@
                     $tabla .= '<li><a href="'.SERVERURL.$paginaurl.'/'.($pagina - 1).'/"><i class="zmdi zmdi-arrow-left"></i></a></li>';
                 }
 
-                for ($i=1; $i <= $Npaginas; $i++) { 
+                for ($i=1; $i <= $Npaginas; $i++) {
 
                     if($pagina == $i){
                         $tabla .= '<li class="active"><a href="'.SERVERURL.$paginaurl.'/'.$i.'/">'.$i.'</a></li>';
@@ -254,7 +255,7 @@
             $codigo = mainModel::limpiar_cadena($codigo);
             $tipo = mainModel::limpiar_cadena($tipo);
             return libroModelo::datos_libro_modelo($tipo, $codigo);
-        } 
+        }
 
         public function actualizar_libro_controlador(){
 
@@ -281,7 +282,7 @@
                 "Categoria" => $categoria,
                 "Codigo" => $codigo
             ];
-            
+
             if(libroModelo::actualizar_libro_modelo($datosLibro)){
 
                 $alerta = [

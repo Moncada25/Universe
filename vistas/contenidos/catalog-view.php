@@ -109,5 +109,5 @@ if($datos[1] == "all"){ ?>
             });
             return false;
         });
-    })
+    });
 </script>

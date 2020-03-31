@@ -319,6 +319,143 @@ html {
 }
 
 
+/*============ Transiciones*/
+
+.efecto-arriba {
+    position: relative;
+    -webkit-animation-name: arriba;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: arriba;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes arriba {
+    from {
+        top: 800px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes arriba {
+    from {
+        top: 800px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+.efecto-izquierda {
+    position: relative;
+    -webkit-animation-name: izquierda;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: izquierda;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes izquierda {
+    from {
+        left: 800px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes izquierda {
+    from {
+        left: 800px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+.efecto-abajo {
+    position: relative;
+    -webkit-animation-name: abajo;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: abajo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes abajo {
+    0% {
+        left: 0;
+        top: -800px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes abajo {
+    0% {
+        left: 0;
+        top: -800px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.efecto-derecha {
+    position: relative;
+    -webkit-animation-name: derecha;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: derecha;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes derecha {
+    from {
+        left: -800px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes derecha {
+    from {
+        left: -800px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+
 /*============ Partes del dashboard*/
 
 .dashboard-sideBar,

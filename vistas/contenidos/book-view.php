@@ -105,7 +105,7 @@
                                     </button>
                                 </span>
                             </div>
-                            <span><small>Tamaño máximo de los archivos adjuntos 5MB. Tipos de archivos permitidos imágenes: PNG, JPEG y JPG</small></span>
+                            <span><small>Tamaño máximo: <strong>(5MB)</strong><br>Archivos permitidos <strong>(PNG, JPEG y JPG)</strong></small></span>
                         </div>
                     </div>
                     <div class="col-xs-12">
@@ -120,7 +120,7 @@
                                     </button>
                                 </span>
                             </div>
-                            <span><small>Tamaño máximo de los archivos adjuntos 5MB. Tipos de archivos permitidos: documentos PDF</small></span>
+                            <span><small>Tamaño máximo: <strong>(5MB)</strong><br>Archivos permitidos: <strong>(PDF)</strong></small></span>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
