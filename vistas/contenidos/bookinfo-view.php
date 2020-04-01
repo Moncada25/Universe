@@ -11,7 +11,7 @@
 <br>
 <!-- Panel info libro -->
 <div class="container-fluid">
-    <div class="panel panel-primary">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title text-center"><?php echo $libro['LibroTitulo']; ?></h3>
         </div>
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                            <img src="<?php echo SERVERURL.'adjuntos/images/'.$libro['LibroImagen']; ?>" alt="book" class="img-responsive">
+                            <img src="<?php echo SERVERURL.'files/images/'.$libro['LibroImagen']; ?>" alt="book" class="img-responsive">
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <div class="container-fluid">
@@ -86,7 +86,7 @@
             <fieldset>
                 <legend><i class="zmdi zmdi-download"></i> &nbsp; Descargar archivo PDF</legend>
                 <p class="text-center">
-                    <a href="<?php echo SERVERURL.'adjuntos/books/'. $libro["LibroPDF"]?>" download="<?php echo "Bookverse - ".$libro["LibroTitulo"]?>" class="btn btn-raised btn-primary">
+                    <a href="<?php echo SERVERURL.'files/books/'. $libro["LibroPDF"]?>" download="<?php echo "Bookverse - ".$libro["LibroTitulo"]?>" class="btn btn-raised btn-info">
                     <i class="zmdi zmdi-cloud-download"></i> &nbsp; DESCARGAR PDF
                     </a>
                 </p>

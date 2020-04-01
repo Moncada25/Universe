@@ -34,8 +34,8 @@
 
             }else{
 
-                $folderPDF = "../adjuntos/books/";
-                $folderIMG = "../adjuntos/images/";
+                $folderPDF = "../files/books/";
+                $folderIMG = "../files/images/";
                 //datos de la imagen
                 $nombre_imagen = $_FILES['imagen-reg']['name'];
                 $tamano_imagen = $_FILES['imagen-reg']['size'];
