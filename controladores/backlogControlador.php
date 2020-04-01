@@ -119,7 +119,7 @@ class backlogControlador extends backlogModelo{
                             <th class="text-center">DESCRIPCIÓN</th>
                             <th class="text-center">PUNTOS</th>
                             <th class="text-center">ESTADO</th>
-                            <th class="text-center">FECHA</th>';
+                            <th class="text-center">CREADA</th>';
                             if($busqueda == ""){
                                 $tabla .= '<th class="text-center">EDITAR</th>';
                             }
