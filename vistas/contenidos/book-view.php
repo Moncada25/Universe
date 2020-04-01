@@ -6,7 +6,7 @@
 <br>
 <!-- Panel nuevo libro -->
 <div class="container-fluid">
-    <div class="panel panel-info">
+    <div class="panel panel-success">
         <div class="panel-heading">
             <h3 class="panel-title text-center">AGREGAR LIBRO</h3>
         </div>
@@ -137,7 +137,7 @@
                     </div>
                 </fieldset>
                 <p class="text-center" style="margin-top: 20px;">
-                    <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+                    <button type="submit" class="btn btn-success btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
                 </p>
                 <div class="RespuestaAjax"></div>
             </form>

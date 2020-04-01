@@ -78,7 +78,7 @@
             <?php endif; ?>
             <li>
                 <a href="<?php echo SERVERURL; ?>catalog/all/">
-                    <i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catálogo
+                    <i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catálogo de libros
                 </a>
             </li>
             <li>
@@ -87,13 +87,8 @@
                 </a>
             </li>
             <li>
-                <a href="<?php echo SERVERURL; ?>github/">
-                    <i class="zmdi zmdi-github-alt zmdi-hc-fw"></i> GitHub
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo SERVERURL; ?>donate/">
-                    <i class="zmdi zmdi-money zmdi-hc-fw"></i> Donar
+                <a href="<?php echo SERVERURL; ?>feedback/">
+                    <i class="zmdi zmdi-github-alt zmdi-hc-fw"></i> Feedback
                 </a>
             </li>
         </ul>

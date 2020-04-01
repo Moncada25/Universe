@@ -9,8 +9,8 @@
 <br>
 <div class="container-fluid text-center">
     <div class="btn-group">
-        <a href="<?php echo SERVERURL.'catalog/all/';?>" class="btn btn-link btn-raised">SELECCIONE UNA CATEGORÍA</a>
-        <a data-target="dropdown-menu" class="btn btn-link btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+        <a href="<?php echo SERVERURL.'catalog/all/';?>" class="btn btn-secondary btn-raised">SELECCIONE UNA CATEGORÍA</a>
+        <a data-target="dropdown-menu" class="btn btn-secondary btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
         <ul class="dropdown-menu drop" style="border-radius: 15px;">
         <li><a href="<?php echo SERVERURL.'catalog/all/';?>">Todas</a></li>
 

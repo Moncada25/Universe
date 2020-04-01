@@ -14,7 +14,7 @@
             $campos = $filesC->fetch();
 ?>
 <div class="container-fluid">
-	<div class="panel panel-danger">
+	<div class="panel panel-info">
 		<div class="panel-heading">
 			<h3 class="panel-title text-center">MI CUENTA</h3>
 		</div>
@@ -226,7 +226,7 @@
 		    		</div>
 		    	</fieldset>
 			    <p class="text-center" style="margin-top: 20px;">
-			    	<button type="submit" class="btn btn-danger btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
+			    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
 			    </p>
 				<div class="RespuestaAjax"></div>
 		    </form>

@@ -1,6 +1,6 @@
 <br>
 <div class="container-fluid">
-    <div class="panel panel-danger">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title text-center">BOOKVERSE</h3>
         </div>
@@ -9,18 +9,18 @@
                 <div class="row">
                     <div class="col-xs-4">
                         <p class="text-center">
-                            <a href="https://github.com/Moncada25/Bookverse/zipball/master"><input type="button" id="linkBookverseZIP" value="Code ZIP" class="btn btn-link btn-raised btn-sm"></a>
+                            <a href="https://github.com/Moncada25/Bookverse/zipball/master"><input type="button" id="linkBookverseZIP" value="Code ZIP" class="btn btn-warning btn-raised btn-sm"></a>
                         </p>
                     </div>
                     <div class="col-xs-4">
                         <p class="text-center">
-                            <a href="https://github.com/Moncada25/" target="_blank"><input type="button" id="linkGitHub" value="GitHub" class="btn btn-link btn-raised btn-sm"></a>
+                            <a href="https://github.com/Moncada25/" target="_blank"><input type="button" id="linkGitHub" value="GitHub" class="btn btn-warning btn-raised btn-sm"></a>
                         </p>
                     </div>
                     <div class="col-xs-4">
                         <p class="text-center">
                             <a href="https://github.com/Moncada25/Bookverse/tarball/master">
-                                <input type="button" id="linkBookverseTAR" value="Code TAR" class="btn btn-link btn-raised btn-sm">
+                                <input type="button" id="linkBookverseTAR" value="Code TAR" class="btn btn-warning btn-raised btn-sm">
                             </a>
                         </p>
                     </div>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-xs-12">
                         <p class="text-center">
-                            <button type="submit" class="btn btn-danger btn-raised btn-sm"><i class="zmdi zmdi-email"></i> &nbsp; Enviar</button>
+                            <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-email"></i> &nbsp; Enviar</button>
                         </p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
 </div>
 
 <div class="container-fluid">
-    <div class="panel panel-success">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title text-center">PACKAPPS</h3>
         </div>
@@ -55,18 +55,18 @@
                 <div class="row">
                     <div class="col-xs-4">
                         <p class="text-center">
-                            <a href="https://github.com/Moncada25/PackApps/zipball/master"><input type="button" id="linkPackAppsZIP" value="Code ZIP" class="btn btn-link btn-raised btn-sm"></a>
+                            <a href="https://github.com/Moncada25/PackApps/zipball/master"><input type="button" id="linkPackAppsZIP" value="Code ZIP" class="btn btn-warning btn-raised btn-sm"></a>
                         </p>
                     </div>
                     <div class="col-xs-4">
                         <p class="text-center">
-                            <a href="https://mega.nz/#F!1E1SQKST!yBXhMg1ZHbrCHSgRm6nw3A" target="_blank"><input type="button" id="linkPackApps" value="App" class="btn btn-link btn-raised btn-sm"></a>
+                            <a href="https://mega.nz/#F!1E1SQKST!yBXhMg1ZHbrCHSgRm6nw3A" target="_blank"><input type="button" id="linkPackApps" value="App" class="btn btn-warning btn-raised btn-sm"></a>
                         </p>
                     </div>
                     <div class="col-xs-4">
                         <p class="text-center">
                             <a href="https://github.com/Moncada25/PackApps/tarball/master">
-                            <input type="button" id="linkPackAppsTAR" value="Code TAR" class="btn btn-link btn-raised btn-sm"></a>
+                            <input type="button" id="linkPackAppsTAR" value="Code TAR" class="btn btn-warning btn-raised btn-sm"></a>
                         </p>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-xs-12">
                         <p class="text-center">
-                            <button type="submit" class="btn btn-success btn-raised btn-sm"><i class="zmdi zmdi-email"></i> &nbsp; Enviar</button>
+                            <button type="submit" class="btn btn-secondary btn-raised btn-sm"><i class="zmdi zmdi-email"></i> &nbsp; Enviar</button>
                         </p>
                     </div>
                 </div>
