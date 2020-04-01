@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-xs-12">
                         <p class="text-center">
-                            <button type="submit" class="btn btn-secondary btn-raised btn-sm"><i class="zmdi zmdi-email"></i> &nbsp; Enviar</button>
+                            <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-email"></i> &nbsp; Enviar</button>
                         </p>
                     </div>
                 </div>

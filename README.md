@@ -29,10 +29,16 @@ Library with educational content
     * Donations to developers
     * ...
 
+  + Backlog
+    * Create tasks
+    * View tasks
+    * Edit tasks
+    * ...
+
 #### New features!
 
   - GitHub module
-  - Donations
+  - Backlog module
   - Automated testing
 
 #### Tech and libraries
