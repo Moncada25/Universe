@@ -7,7 +7,7 @@
             $listaBlanca = ["adminlist", "adminsearch", "admin", "book", "bookconfig", "bookinfo",
                         "catalog", "category", "categorylist", "client", "clientlist", "clientsearch",
                         "home", "myaccount", "mydata",
-                        "search", "signup", "github", "task", "tasklist", "backlog", "editbacklog"];
+                        "search", "signup", "github", "task", "tasklist", "backlog", "editbacklog", "donate"];
 
             if(in_array($vistas, $listaBlanca)){
 

@@ -91,6 +91,11 @@
                     <i class="zmdi zmdi-github-alt zmdi-hc-fw"></i> GitHub
                 </a>
             </li>
+            <li>
+                <a href="<?php echo SERVERURL; ?>donate/">
+                    <i class="zmdi zmdi-money zmdi-hc-fw"></i> Donar
+                </a>
+            </li>
         </ul>
     </div>
 </section>

@@ -293,8 +293,8 @@ html {
 .blur {
     height: 100%;
     background-image: url("../assets/img/login.jpg");
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -340,7 +340,7 @@ html {
 .dashboard-sideBar {
     left: 0;
     z-index: 2;
-    background-image: url("../assets/img/sideBar.png");
+    background-image: url("../assets/img/sideBar.jpg");
     border-right: 1px solid rgba(255, 255, 255, 0.7);
     overflow: hidden;
 }
