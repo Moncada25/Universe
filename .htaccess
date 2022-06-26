@@ -2,11 +2,3 @@ Options All -Indexes
 
 RewriteEngine On
 RewriteRule ^([a-zA-Z0-9/]+)$ index.php?views=$1
-
-php_value upload_max_filesize 100M
- 
-php_value post_max_size 100M
- 
-php_value max_execution_time 1000
- 
-php_value max_input_time 1000
