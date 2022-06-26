@@ -5,7 +5,7 @@
     // const USER = "root";
     // const PASS = "";
 
-    const SERVER = "https://bookverse25.herokuapp.com/";
+    const SERVER = "ik1eybdutgxsm0lo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
     const DB = "bdvtytxbnhpbhbyu";
     const USER = "l662rn3oscw733ih";
     const PASS = "icvfn049zrj6y0q0";
