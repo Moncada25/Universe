@@ -1,14 +1,14 @@
 <?php
 
-    // const SERVER = "localhost";
-    // const DB = "packapps";
-    // const USER = "root";
-    // const PASS = "";
-
     const SERVER = "localhost";
-    const DB = "u361371304_bookverse";
-    const USER = "u361371304_root";
-    const PASS = "27@a9~uA;nW";
+    const DB = "packapps";
+    const USER = "root";
+    const PASS = "";
+
+    // const SERVER = "localhost";
+    // const DB = "u361371304_bookverse";
+    // const USER = "u361371304_root";
+    // const PASS = "27@a9~uA;nW";
 
     const SGBD = "mysql:host=" . SERVER . ";dbname=" . DB;
 

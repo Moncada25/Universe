@@ -11,8 +11,8 @@
 
             if(in_array($vistas, $listaBlanca)){
 
-                if(is_file("./vistas/contenidos/" . $vistas . "-view.php")){
-                    $contenido = "./vistas/contenidos/" . $vistas . "-view.php";
+                if(is_file("vistas/contenidos/" . $vistas . "-view.php")){
+                    $contenido = "vistas/contenidos/" . $vistas . "-view.php";
                 }else{
                     $contenido = "login";
                 }

@@ -1,11 +1,11 @@
 <?php
 
-    require_once "./modelos/vistasModelo.php";
+    require_once $SERVERURL . "modelos/vistasModelo.php";
 
     class vistasControlador extends vistasModelo{
 
         public function obtener_plantilla_controlador(){
-            return require_once "./vistas/plantilla.php";
+            return require_once $SERVERURL . "vistas/plantilla.php";
         }
 
         public function obtener_vistas_controlador(){

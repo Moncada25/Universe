@@ -134,9 +134,8 @@ class loginControlador extends loginModelo{
 
         return loginModelo::cerrar_sesion_modelo($datos);
     }
-
+    
     public function forzar_cierre_sesion_controlador(){
-        //echo '<script> alert("pasa");</script>';
         session_unset();
         session_destroy();
         $redirec = '<script> window.location.href="'.SERVERURL.'login/" </script>';

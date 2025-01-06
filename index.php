@@ -1,7 +1,7 @@
 <?php
 
-    require_once "core/configGeneral.php";
-    require_once "controladores/vistasControlador.php";
+    require_once $SERVERURL . "core/configGeneral.php";
+    require_once $SERVERURL . "controladores/vistasControlador.php";
 
     $plantilla = new vistasControlador();
     $plantilla->obtener_plantilla_controlador();
