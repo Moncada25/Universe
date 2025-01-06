@@ -86,11 +86,6 @@
                     <i class="zmdi zmdi-lamp zmdi-hc-fw"></i> Backlog
                 </a>
             </li>
-            <li>
-                <a href="<?php echo SERVERURL; ?>feedback/">
-                    <i class="zmdi zmdi-github-alt zmdi-hc-fw"></i> Feedback
-                </a>
-            </li>
         </ul>
     </div>
 </section>

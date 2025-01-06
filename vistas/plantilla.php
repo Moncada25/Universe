@@ -19,10 +19,10 @@ session_start(['name' => 'SBP']);
 
 		$peticionAjax = false;
 
-		require_once "./controladores/loginControlador.php";
+		require_once $SERVERURL . "controladores/loginControlador.php";
 		$lc = new loginControlador();
 
-		require_once "./controladores/vistasControlador.php";
+		require_once $SERVERURL . "controladores/vistasControlador.php";
 		$vt = new vistasControlador();
 
 		$vistasR = $vt->obtener_vistas_controlador();
@@ -34,11 +34,11 @@ session_start(['name' => 'SBP']);
 			}
 
 			if($vistasR == "login"){
-				require_once "./vistas/contenidos/login-view.php";
+				require_once $SERVERURL . "vistas/contenidos/login-view.php";
 			}elseif($vistasR == "signup"){
-				require_once "./vistas/contenidos/signup-view.php";
+				require_once $SERVERURL . "vistas/contenidos/signup-view.php";
 			}else{
-				require_once "./vistas/contenidos/404-view.php";
+				require_once $SERVERURL . "vistas/contenidos/404-view.php";
 			}
 
 		else:
@@ -49,20 +49,20 @@ session_start(['name' => 'SBP']);
 	?>
 
 	<!-- SideBar -->
-    <?php include "vistas/modulos/navlateral.php"; ?>
+    <?php include $SERVERURL . "vistas/modulos/navlateral.php"; ?>
 
 	<!-- Content page-->
 	<section class="full-box dashboard-contentPage">
 
 		<!-- NavBar -->
-        <?php include "vistas/modulos/navbar.php"; ?>
+        <?php include $SERVERURL . "vistas/modulos/navbar.php"; ?>
 
 		<!-- Content page -->
 		<?php require_once $vistasR; ?>
 
 	</section>
 
-<?php include "./vistas/modulos/logoutScript.php";
+<?php include $SERVERURL . "vistas/modulos/logoutScript.php";
 
 			endif; ?>
 

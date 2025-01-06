@@ -5,10 +5,10 @@
     // const USER = "root";
     // const PASS = "";
 
-    const SERVER = "https://bookverse25.herokuapp.com/";
-    const DB = "bdvtytxbnhpbhbyu";
-    const USER = "l662rn3oscw733ih";
-    const PASS = "icvfn049zrj6y0q0";
+    const SERVER = "localhost";
+    const DB = "u361371304_bookverse";
+    const USER = "u361371304_root";
+    const PASS = "27@a9~uA;nW";
 
     const SGBD = "mysql:host=" . SERVER . ";dbname=" . DB;
 
