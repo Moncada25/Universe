@@ -34,19 +34,19 @@
 
             }else{
 
-                $folderPDF = "../files/books/";
-                $folderIMG = "../files/images/";
+                $folderPDF = SERVERURL . "files/books/";
+                $folderIMG = SERVERURL . "files/images/";
                 //datos de la imagen
                 $nombre_imagen = $_FILES['imagen-reg']['name'];
                 $tamano_imagen = $_FILES['imagen-reg']['size'];
 
-                 //datos del PDF
-                 $nombre_pdf = $_FILES['pdf-reg']['name'];
-                 $tamano_pdf = $_FILES['pdf-reg']['size'];
+                //datos del PDF
+                $nombre_pdf = $_FILES['pdf-reg']['name'];
+                $tamano_pdf = $_FILES['pdf-reg']['size'];
 
                 if((substr($nombre_imagen,-4) == "jpeg" || substr($nombre_imagen,-3) == "jpg" || substr($nombre_imagen,-3) == "png") && $tamano_imagen < 5000000){
 
-                    if(substr($nombre_pdf,-3) == "pdf" && $tamano_pdf < 5000000){
+                    if(substr($nombre_pdf,-3) == "pdf" && $tamano_pdf < 20000000){
 
                         $dataL = [
                             "Codigo" => $codigo,

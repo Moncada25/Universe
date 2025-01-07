@@ -25,7 +25,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Título *</label>
-                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" type="text" name="titulo-reg" required="" maxlength="40">
+                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,60}" class="form-control" type="text" name="titulo-reg" required="" maxlength="60">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
@@ -55,7 +55,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Edición</label>
-                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="edicion-reg" maxlength="30">
+                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9-]{1,30}" class="form-control" type="text" name="edicion-reg" maxlength="30">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
@@ -115,7 +115,7 @@
                                     </button>
                                 </span>
                             </div>
-                            <span><small>Tamaño máximo: <strong>(5MB)</strong><br>Archivos permitidos: <strong>(PDF)</strong></small></span>
+                            <span><small>Tamaño máximo: <strong>(20MB)</strong><br>Archivos permitidos: <strong>(PDF)</strong></small></span>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
